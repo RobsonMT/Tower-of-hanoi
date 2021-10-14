@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Torre De Hanoi</title>
 </head>
 <body>
     <header>
         <h1>Torre De Hanoi</h1>
+        <img src="./assets/img/logo.png" alt="">
     </header>
     <main>
-        <!-- CONTEÚDO FINAL  -->
-        <section id="towers_wrapper">
+        <div class="painel">
+            <ul class="opcoes">
+                <li>
+                    <span>Dificuldade:</span>
+                    <select name="numDiscs" id="numDiscs">
+                    <option></option>
+                    <option value="3" id="3">Nivel 1</option>
+                    <option value="4" id="4">Nivel 2</option>
+                    <option value="5" id="5">Nivel 3</option>
+                    </select>
+                </li>
+                <li><span>Mínimo de movimentos: </span><label id="minMov">0</label></li>
+                <li><span>Seus movimentos: </span><label id="numMov">0</label></li>
+                <li class="buttons">
+                    <button id="btnRestart" type="button">Restart</button>
+                    <button id="btnStart">Start</button>
+                </li>
+            </ul>
+        </div>
+        <section id="towers_wrapper" class="towers_wrapper">
             <div class="tower drop_area" id="twr_1"></div>
             <div class="tower drop_area" id="twr_2"></div>
             <div class="tower drop_area" id="twr_3"></div>
         </section>
+        <div class="base"></div>
     </main>
-    <!-- script -->
-    <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>

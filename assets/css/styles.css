@@ -1,0 +1,135 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+}
+header{
+    width: 100vw;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+}
+header>h1{
+    text-align: center;
+    line-height: 60px;
+}
+main{
+    background-color: transparent;
+}
+/* TOWERS-WRAPPER */
+section.towers_wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 35vh;
+}
+div.tower{
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    border-radius: 10px 10px 0px 0px;
+    align-items: center;
+    justify-items: end;
+    min-width: 18px;
+    width: 1.5vw;
+    height: 80%;
+}
+div.bgTower{
+    background-image: url('../img/bg.jpg');
+    background-position: bottom;
+}
+div.base{
+    width: 100%;
+    height: 18px;
+    min-height: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* DISCS */
+span.disc{
+    height: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-indent: -999999px;
+    background-position: bottom;
+}
+div.painel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 5px 5px;
+    width: 90vw;
+    height: 35vh;
+    margin: 0px auto;
+}
+ul.opcoes{
+    list-style: none;
+    padding: 2vh;
+    line-height: 4vh;
+    color: wheat;
+    border: 1px solid;
+}
+ul button{
+    width: 40%;
+    padding: 5px;
+    margin-top: 2vh;
+}
+li.buttons{
+    text-align: center;
+}
+ul button:hover{
+    cursor: pointer;
+}
+select:hover{
+    cursor: pointer;
+}
+ul>li>span,label{
+    color: rgb(92, 89, 89);
+    text-shadow: 2px #ccc;
+}
+/* MOVING DISCS */
+.moving:hover{
+    opacity: 0.8;
+}
+.drop_area.yes{
+    border-left: 5px solid rgb(51, 255, 0);
+    border-top: 5px solid rgb(51, 255, 0);
+    border-right: 5px solid rgb(51, 255, 0);
+}
+.drop_area.noo{
+    border-left: 5px solid rgb(236, 81, 34);;
+    border-top: 5px solid rgb(236, 81, 34);;
+    border-right: 5px solid rgb(236, 81, 34);;
+}
+/* BLOCK DRAG DISCS */
+.unselectable {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    -moz-user-select: none;
+    user-select: none; 
+    -webkit-user-drag: none;
+}
+.righlight {
+    animation-name: righlight;
+    animation-delay: 0.2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+@keyframes righlight{
+    0% {opacity: 1;}
+    50% {opacity: .2;}
+    100% {opacity: 1;}
+}
